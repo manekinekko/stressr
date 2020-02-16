@@ -1,11 +1,7 @@
+import { HttpClient, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpRequest,
-  HttpResponse,
-} from '@angular/common/http';
-import { timer, throwError } from 'rxjs';
-import { switchMap, tap, catchError, last, map } from 'rxjs/operators';
+import { timer } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: `root`
@@ -15,7 +11,7 @@ export class StressrService {
 
   load(url: string, {interval} = {interval: 5000}) {
     return timer(0, interval).pipe(
-      switchMap(_ => this.httpGet(url),
+      mergeMap(_ => this.httpGet(url),
     ));
   }
   private httpGet(url: string) {
@@ -27,7 +23,7 @@ export class StressrService {
     return this.http.request(req).pipe(
       map((response: HttpResponse<any>) => {
         if (response.headers) {
-          (response.headers as any).__endTime = Date.now() - startTime;
+          (response.headers as any).__responseTime = Date.now() - startTime;
         }
         return response;
       })

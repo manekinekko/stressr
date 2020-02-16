@@ -14,14 +14,27 @@
         required
       />
     </label>
-    <button *ngIf="!isRunning" (click)="load()" class="btn-load" type="submit">
-      Load
+    <button *ngIf="!isRunning" (click)="load()" class="btn-load">
+      Stress
     </button>
     <button *ngIf="isRunning" (click)="stop()" class="btn-stop">Stop</button>
   </section>
   <section>
+    <ul>
+      <li class="status-success">
+        <b>{{ counter.success }}</b>
+      </li>
+      <li class="status-error">
+        <b>{{ counter.error }}</b>
+      </li>
+      <li>
+        <b>{{ counter.responseTimeAvg }}ms</b>
+      </li>
+    </ul>
+  </section>
+  <section>
     <pre>
-    <code *ngFor="let result of results">{{ result}}ms</code>
+    <code *ngFor="let result of results">{{ result.statusText}}: {{ result.headers.__responseTime}}ms</code>
     </pre>
   </section>
 </main>
