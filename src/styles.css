@@ -11,4 +11,16 @@ body, html {
   margin: 0;
 }
 
+footer {
+  font-family: "Lemon", cursive;
+  font-size: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
 
+footer a {
+  color: white;
+}

@@ -48,6 +48,22 @@ pre {
   text-align: left;
   height: 200px;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+pre::-webkit-scrollbar {
+  width: 0.5em;
+}
+pre::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+pre::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+pre::-webkit-scrollbar:hover {
+  width: 0.7em;
 }
 
 code {
@@ -56,6 +72,8 @@ code {
 
 ul {
   list-style: none;
+  margin: 30px;
+  padding: 0;
 }
 
 li {
@@ -63,7 +81,8 @@ li {
   width: 100px;
   height: 70px;
   margin: 10px;
-  border: 1px solid white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 }
 
 li b {
