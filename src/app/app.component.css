@@ -1,0 +1,54 @@
+main {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-name {
+  font-family: 'Lemon', cursive;
+  font-size: 4em;
+}
+
+input, button {
+  border: 0px;
+  outline: 0;
+  box-shadow: 0;
+  background: rgba(0,0,0,.15);
+  border-bottom: 5px solid rgba(0,0,0,.05);
+  color: white;
+  line-height: 50px;
+  padding: 5px 10px;
+  font-size: 20px;
+  width: 80vw;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,.25);;
+}
+
+button {
+  width: auto;
+  cursor: pointer;
+}
+
+button:active {
+  background: rgba(0,0,0,.5);
+}
+
+.btn-load {
+  background: rgba(0,255,0,.5);
+}
+
+.btn-stop {
+  background: rgba(255,0,0,.5);
+}
+
+pre {
+  text-align: left;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+code {
+  display: block;
+}

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Lemon&display=swap');
+
+* { box-sizing: border-box; position:relative;}
+
+body, html {
+  background: #64c4ff;
+  font-family: "lato", sans-serif;
+  color: rgba(255,255,255,1);
+  margin: 0;
+}
+
+
