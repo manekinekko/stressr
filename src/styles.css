@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Lemon&display=swap');
+/* 11.1kb */
+/* @import url('https://fonts.googleapis.com/css?family=Lemon&display=swap'); */
+
+/* ONLY 1.1kb !!! */
+@import url('https://fonts.googleapis.com/css?family=Lemon&display=swap&text=StressrBuiltbywassimcheghamlove@manekinekko()');
 
 * { box-sizing: border-box; position:relative;}
 
